@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Averta, sans-serif;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+section {
+  display: block;
+}
+
+.hero-container {
+  height: 900px;
+  background-image: url(https://zuri.team/img/hero-bg.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.center-image {
+  margin: auto;
+  display: flex;
+  padding-top: 69px;
+  margin-bottom: 69px;
+}
+
+.center-image img {
+  margin: auto;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.hero {
+  padding: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  font-weight: 800;
+  color: #514949;
+  margin-bottom: 36px;
+}
+
+.hero p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #514949;
+  opacity: 0.9;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #e7332b;
+  text-decoration: none;
+}
+
+.btn-div {
+  margin-top: 92px;
+  margin-bottom: 5rem;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .row {
+    /* display: block; */
+    flex-direction: column;
+    background-color: #fff;
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 350px) {
+  .btn-div {
+    display: block;
+    margin-top: -40px;
+    margin-bottom: 195px;
+  }
+
+  .my-btn {
+    margin-top: -30px;
+    margin-bottom: 195px;
+  }
+  .heading {
+    font-size: 14px;
+    line-height: 24px;
+    color: #e7332b;
+  }
+}
+
+.btn-red {
+  background-color: #e7332b;
+  color: #fff;
+  margin-right: 24px;
+  margin: 30px;
+  padding: 11px 28px;
+  border: 1px solid #e7332b;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.btn-red:not(:disabled) {
+  cursor: pointer;
+}
+
+.btn-red:active,
+.btn-red:hover {
+  background-color: #fff;
+  color: #e7332b;
+}
+
+.my-btn {
+  background-color: #fff;
+  color: #e7332b;
+  margin: 30px;
+  padding: 11px 28px;
+  border: 1px solid #e7332b;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.my-btn:not(:disabled) {
+  cursor: pointer;
+}
+
+.my-btn:active,
+.my-btn:hover {
+  background-color: #e7332b;
+  color: #fff;
+}
+
+.programs {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.program-content {
+  /* margin: 0 auto; */
+  text-align: center;
+  /* max-width: 1440px; */
+  width: 80%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.heading {
+  font-size: 14px;
+  line-height: 24px;
+  color: #e7332b;
+  margin-top: 141px;
+}
+
+.slogan {
+  font-size: 24px;
+  line-height: 40px;
+  text-align: center;
+  color: #514949;
+  margin-top: 8px;
+  margin-bottom: 64px;
+}
+
+.my-container {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  /* max-width: 1240px; */
+}
+
+.row {
+  display: flex;
+  /* flex-wrap: wrap; */
+  margin-right: -15px;
+  margin-left: -75px;
+}
+
+.program-card-zed {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.program-card {
+  /* height: 511px; */
+  width: 100%;
+  /* border: 1px solid red; */
+  background-color: #fffafa;
+  padding: 61px 47px 82px 36px;
+  text-align: justify-all;
+}
+
+.program-card img {
+  margin-bottom: 48px;
+  margin-left: -70%;
+  padding-left: 0%;
+}
+
+img.card-bg-svg-1 {
+  width: 100%;
+  position: absolute;
+  left: -120px;
+  top: -75px;
+  z-index: -1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+img.card-bg-svg-2 {
+  width: 90%;
+  position: absolute;
+  right: -120px;
+  top: -75px;
+  z-index: -1;
+}
+
+.footer {
+  margin-top: 215px;
+  max-width: 1240px;
+}
+
+.footer-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+  padding: 20px;
+}
+
+.footer h3 {
+  margin: 1rem;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #514949;
+}
+
+.flex-5 h3 {
+  margin: 1rem;
+}
+
+.address p {
+  margin: 1rem;
+  font-size: 14px;
+  line-height: 20px;
+  color: #514949;
+  opacity: 0.9;
+}
+
+.horizontal {
+  margin: 1rem;
+}
+
+.copyright p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  margin-top: 32px;
+  color: #514949;
+  padding-bottom: 97px;
+}
