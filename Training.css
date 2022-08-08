@@ -28,13 +28,17 @@ body {
 }
 
 .header--flex img {
-  margin-left: 40px;
+  margin-left: 10px;
   margin-right: -50px;
+}
+
+.header-flex-1 {
+  flex-wrap: wrap;
 }
 
 .header-flex-1 a {
   margin-right: 4rem;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 a {
