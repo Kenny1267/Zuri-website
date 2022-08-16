@@ -734,9 +734,10 @@ a {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 20px;
   border: 1px solid rgba(71, 44, 111, 0.43);
+  cursor: pointer;
 }
 
 .first-flex svg {
@@ -744,9 +745,19 @@ a {
   transition: transform 200ms;
 }
 
-.first-flex svg:hover {
+.cross-transition {
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition-property: fill;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
   transform: rotate(360deg);
+  transition: transform 0.4s;
   /* transform: rotateX(180deg); */
+}
+
+.cross_transition {
+  transform: rotate(-360deg);
 }
 
 .second-flex {
@@ -754,7 +765,8 @@ a {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  cursor: pointer;
+  align-items: flex-start;
   padding: 20px;
   border: 1px solid rgba(71, 44, 111, 0.43);
 }
@@ -768,8 +780,9 @@ a {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 20px;
+  cursor: pointer;
   border: 1px solid rgba(71, 44, 111, 0.43);
 }
 
@@ -782,8 +795,9 @@ a {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 20px;
+  cursor: pointer;
   border: 1px solid rgba(71, 44, 111, 0.43);
 }
 
@@ -796,8 +810,9 @@ a {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 20px;
+  cursor: pointer;
   border: 1px solid rgba(71, 44, 111, 0.43);
 }
 
@@ -1233,4 +1248,51 @@ a {
     display: flex;
     flex-direction: column;
   }
+}
+
+.backdrop-1 {
+  position: absolute;
+  /* background-color: blueviolet; */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  opacity: 1;
+  /* visibility: hidden; */
+}
+
+.first-pop-up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100vh;
+  transform: translate(-50%, -50%) scale(0.1);
+  white-space: pre;
+  border-radius: 8px;
+  background-color: white;
+  text-align: center;
+  margin: auto;
+  z-index: 100;
+  font-weight: 400;
+
+  visibility: hidden;
+  /* display: none; */
+}
+
+.first-outline {
+  position: absolute;
+  left: 80%;
+  top: 12%;
+}
+
+.open-pop-up {
+  visibility: visible;
+  transition: transform 0.4s, center 0.4s;
+  width: 100%;
+  height: 100vh;
+  transform: translate(-50%, -50%) scale(1);
 }

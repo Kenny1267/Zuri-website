@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Training</title>
     <link rel="stylesheet" href="Training.css">
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <main>
@@ -26,6 +27,21 @@
           </div>
         </div>
       </header>
+      <template id="first-template">
+          <p class="paragraph-1">No, the program is completely free thanks to Ingressive For Good</p>
+      </template>
+      <template id="second-template">
+          <p class="paragraph-2">You'll need a laptop, internet connection and the willingness to learn through collaboration and mentorship.</p>
+      </template>
+      <template id="third-template">
+          <p class="paragraph-3">Participants who join the program and stop engaging will be given the chance to catch up. You'll also be assigned a 'study-mate' and mentor to help you. However, there is the possibility of not being promoted to the next stage if you remain inactive for too long</p>
+      </template>
+      <template id="fourth-template">
+          <p class="paragraph-4"> Unfortunately, no, you cannot switch from part-time to full-time and vice-versa</p>
+      </template>
+      <template id="fifth-template">
+          <p class="paragraph-5">We reward some participants who complete tasks early, however, this is not a weekly reward. All the work that will be done during the program are hypothetical.</p>
+      </template>
       <section id="section-1">
         <div class="section-1_flex">
           <div>
@@ -288,9 +304,10 @@
       </div>
       <div section-6_flex>
         <div class="first-flex">
-          <h2>Would i have to pay to enroll for the training?</h2>
-          <svg
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+          <div class="question-1">
+          <h2 >Would i have to pay to enroll for the training?</h2>
+          </div>
+          <svg id="first-cross"
             focusable="false"
             aria-hidden="true"
             viewBox="0 0 24 24"
@@ -300,9 +317,10 @@
           </svg>
         </div>
         <div class="second-flex">
+          <div class="question-2">
           <h2>What are the things i would need to participate?</h2>
-          <svg
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+        </div>
+          <svg id="second-cross"
             focusable="false"
             aria-hidden="true"
             viewBox="0 0 24 24"
@@ -312,10 +330,10 @@
           </svg>
         </div>
         <div class="third-flex">
+          <div class="question-3">
           <h2>What happens if i join and i'm not active?</h2>
-          <svg
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
-            focusable="false"
+        </div>
+          <svg id="third-cross" focusable="false"
             aria-hidden="true"
             viewBox="0 0 24 24"
             data-testid="AddIcon"
@@ -324,9 +342,11 @@
           </svg>
         </div>
         <div class="fourth-flex">
+          <div class="question-4">
           <h2>Can i switch from part-time to full-time and vice-versa?</h2>
+        </div>
           <svg
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+          id="fourth-cross"
             focusable="false"
             aria-hidden="true"
             viewBox="0 0 24 24"
@@ -336,9 +356,11 @@
           </svg>
         </div>
         <div class="fifth-flex">
+          <div class="question-5">
           <h2>Will i get paid?</h2>
+        </div>
           <svg
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+          id="fifth-cross"
             focusable="false"
             aria-hidden="true"
             viewBox="0 0 24 24"
@@ -388,7 +410,7 @@
               <li>Certification of Attendance</li>
               <li>
                 <a href="">Zuri Internship</a>
-                <img src="./img/clarity.svg" alt="" />
+                <img id="clarity-1" src="./img/clarity.svg" alt="" />
               </li>
               <li>
                 Laptop Reward (upgrade or new one)
@@ -444,6 +466,32 @@
         <img class="round" src="./img/round.svg" alt="" />
         <img class="curve" src="./img/curve2.svg" alt="" />
       </section>
+      <div id="backdrop">
+        <div id="first-pop" class="first-pop-up">
+          <h3>Zuri Internship Is Optional</h3>
+          <svg
+            id="first"
+            class="first-outline"
+            width="38"
+            height="39"
+            viewBox="0 0 38 39"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21.2324 19.4999L28.0407 12.7074C28.3389 12.4092 28.5064 12.0049 28.5064 11.5832C28.5064 11.1616 28.3389 10.7572 28.0407 10.4591C27.7426 10.1609 27.3382 9.99341 26.9166 9.99341C26.4949 9.99341 26.0905 10.1609 25.7924 10.4591L18.9999 17.2674L12.2074 10.4591C11.9093 10.1609 11.5049 9.99341 11.0832 9.99341C10.6616 9.99341 10.2572 10.1609 9.95907 10.4591C9.66092 10.7572 9.49342 11.1616 9.49342 11.5832C9.49342 12.0049 9.66092 12.4092 9.95907 12.7074L16.7674 19.4999L9.95907 26.2924C9.81067 26.4396 9.69288 26.6147 9.61249 26.8076C9.53211 27.0006 9.49072 27.2075 9.49072 27.4166C9.49072 27.6256 9.53211 27.8325 9.61249 28.0255C9.69288 28.2184 9.81067 28.3935 9.95907 28.5407C10.1063 28.6891 10.2814 28.8069 10.4743 28.8873C10.6673 28.9677 10.8742 29.0091 11.0832 29.0091C11.2923 29.0091 11.4992 28.9677 11.6921 28.8873C11.8851 28.8069 12.0602 28.6891 12.2074 28.5407L18.9999 21.7324L25.7924 28.5407C25.9396 28.6891 26.1147 28.8069 26.3077 28.8873C26.5006 28.9677 26.7075 29.0091 26.9166 29.0091C27.1256 29.0091 27.3325 28.9677 27.5255 28.8873C27.7184 28.8069 27.8935 28.6891 28.0407 28.5407C28.1891 28.3935 28.3069 28.2184 28.3873 28.0255C28.4677 27.8325 28.5091 27.6256 28.5091 27.4166C28.5091 27.2075 28.4677 27.0006 28.3873 26.8076C28.3069 26.6147 28.1891 26.4396 28.0407 26.2924L21.2324 19.4999Z"
+              fill="#E7332B"
+            />
+          </svg>
+          <p>What do you mean by this?</p>
+          <p>
+            The Zuri Internship is another level of training that places the
+            participants in a work simulation. It is not paid work; it’s a short
+            training program to get participants ready for actual jobs. There will
+            be cash rewards for a job well done.
+          </p>
+        </div>
+      </div>
     </main>
     <footer>
         <div class="footer-flex-1">
